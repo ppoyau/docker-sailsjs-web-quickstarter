@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${FRONT_PORT}:1337"
+    volumes:
+      - .:/usr/src/app
